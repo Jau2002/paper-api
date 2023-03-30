@@ -1,0 +1,17 @@
+# macOS-specific files
+.DS_Store
+
+# Python cache
+__pycache__
+*.pyc
+*.pyo
+
+# Binaries
+*.so
+*.pyd
+
+# Virtual environment
+venv/
+
+# IDE JetBrains
+.idea/
