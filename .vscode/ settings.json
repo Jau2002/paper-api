@@ -1,0 +1,9 @@
+{
+	"defaultInterpreterPath": "${workspaceFolder}/.venv",
+	"[python]": {
+		"editor.defaultFormatter": "ms-python.black-formatter"
+	},
+	"[shellscript][dockerfile][dotenv][hosts][jvmoptions][ignore][gitignore][properties][spring-boot-properties][azcli][bats]": {
+		"editor.defaultFormatter": "foxundermoon.shell-format"
+	}
+}

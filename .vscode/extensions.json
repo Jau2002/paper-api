@@ -1,0 +1,9 @@
+{
+	"recommendations": [
+		"ms-python.black-formatter",
+		"ms-python.python",
+		"foxundermoon.shell-format",
+		"mongodb.mongodb-vscode",
+		"dotenv.dotenv-vscode"
+	]
+}
