@@ -15,3 +15,9 @@ venv/
 
 # IDE JetBrains
 .idea/
+
+# environment variables
+.env*
+.flaskenv*
+!.env.project
+!.env.vault
