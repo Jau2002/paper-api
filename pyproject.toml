@@ -1,0 +1,93 @@
+[tool.yapf]
+based_on_style = 'google'
+
+[tool.yapfignore]
+ignore_patterns = ['.mypy_cache', '.pytype', '.venv', '__pypackages__', 'venv']
+
+[tool.mypy]
+python_version = "3.9"
+strict = true
+warn_return_any = true
+warn_unused_configs = true
+ignore_missing_imports = true
+exclude = '''(?x)(
+    ^venv\.py$
+)'''
+
+[tool.ruff]
+line-length = 79
+dummy-variable-rgx = '^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$'
+target-version = 'py311'
+ignore = ['A003', 'B904', 'TRY200', 'TRY002']
+select = [
+  'A',
+  'B',
+  'C',
+  'E',
+  'F',
+  'G',
+  'I',
+  'N',
+  'Q',
+  'S',
+  'T',
+  'W',
+  'ANN',
+  'ARG',
+  'BLE',
+  'COM',
+  'DJ',
+  'DTZ',
+  'EM',
+  'ERA',
+  'EXE',
+  'FBT',
+  'ICN',
+  'ISC',
+  'NPY',
+  'PD',
+  'PGH',
+  'PIE',
+  'PL',
+  'PT',
+  'PTH',
+  'PYI',
+  'RET',
+  'RSE',
+  'RUF',
+  'SIM',
+  'SLF',
+  'TCH',
+  'TID',
+  'TRY',
+  'UP',
+  'YTT',
+]
+exclude = [
+  '.bzr',
+  '.direnv',
+  '.eggs',
+  '.git',
+  '.hg',
+  '.mypy_cache',
+  '.nox',
+  '.pants.d',
+  '.pytype',
+  '.ruff_cache',
+  '.svn',
+  '.tox',
+  '.venv',
+  '__pypackages__',
+  '_build',
+  'buck-out',
+  'build',
+  'dist',
+  'node_modules',
+  'venv',
+]
+
+[tool.ruff.mccabe]
+max-complexity = 10
+
+[tool.ruff.flake8-quotes]
+docstring-quotes = 'double'

@@ -21,3 +21,6 @@ venv/
 .flaskenv*
 !.env.project
 !.env.vault
+
+# Ruff cache
+.ruff_cache

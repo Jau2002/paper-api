@@ -4,18 +4,28 @@ verify_ssl = true
 name = "pypi"
 
 [scripts]
-start = "./scripts/start.sh"
+start = "uvicorn app.main:app --reload"
+format = "yapf . -i -r -vv"
+type = "mypy . --config-file=pyproject.toml"
+lint = "ruff check . --fix --config=pyproject.toml --show-source --show-fixes --ignore-noqa --format=grouped"
+test = "pytest"
 
 [packages]
 fastapi = "==0.95.0"
 pydantic = "==1.10.7"
 pymongo = "==4.3.3"
 python-dotenv-vault = "==0.4.1"
+pytz = "==2023.3"
+requests = "==2.28.2"
+pytest = "==7.3.0"
 
 [dev-packages]
-black = "==23.3.0"
-pylint = "==2.17.2"
+ruff = "==0.0.261"
 uvicorn = "==0.21.1"
+yapf = "==0.32.0"
+toml = "==0.10.2"
+mypy = "==1.2.0"
+types-pytz = "==2023.3.0.0"
 
 [requires]
 python_version = "3.10"
